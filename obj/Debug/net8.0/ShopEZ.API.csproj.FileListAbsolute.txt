@@ -135,3 +135,4 @@ C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\refint\ShopEZ
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.pdb
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.genruntimeconfig.cache
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ref\ShopEZ.API.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.sourcelink.json
