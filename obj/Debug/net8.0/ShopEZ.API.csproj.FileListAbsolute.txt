@@ -20,7 +20,16 @@ C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Ent
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Identity.Client.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
@@ -33,6 +42,8 @@ C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Ope
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\MySqlConnector.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -43,6 +54,7 @@ C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\System.Compos
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\bin\Debug\net8.0\System.Memory.Data.dll
@@ -121,6 +133,7 @@ C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.As
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.csproj.CoreCompileInputs.cache
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.sourcelink.json
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\staticwebassets\msbuild.ShopEZ.API.Microsoft.AspNetCore.StaticWebAssets.props
@@ -135,4 +148,3 @@ C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\refint\ShopEZ
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.pdb
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.genruntimeconfig.cache
 C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ref\ShopEZ.API.dll
-C:\Users\visha\Desktop\ShopEZ-Frontend\ShopEZ.API\obj\Debug\net8.0\ShopEZ.API.sourcelink.json
