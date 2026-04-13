@@ -23,7 +23,7 @@ public class OrdersController : ControllerBase
         }
         catch (Exception ex)
         {
-            return BadRequest(ex.Message);
+          return StatusCode(500, ex.ToString()); // 🔥 SHOW FULL ERROR
         }
     }
 
