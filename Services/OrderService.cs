@@ -1,71 +1,54 @@
-using ShopEZ.API.Data;
-using ShopEZ.API.Models;
-using ShopEZ.API.DTOs;
-using Microsoft.EntityFrameworkCore;
-
-public class OrderService : IOrderService
+public async Task<OrderResponseDTO> CreateOrderAsync(OrderDTO orderDto)
 {
-    private readonly ApplicationDbContext _context;
+    if (orderDto.Items == null || !orderDto.Items.Any())
+        throw new Exception("Cart is empty");
 
-    public OrderService(ApplicationDbContext context)
+    decimal totalAmount = 0;
+    var orderItems = new List<OrderItem>();
+
+    foreach (var item in orderDto.Items)
     {
-        _context = context;
-    }
+        var product = await _context.Products.FindAsync(item.ProductId);
 
-    public async Task<Order> CreateOrderAsync(OrderDTO orderDto)
-    {
-        if (orderDto.Items == null || !orderDto.Items.Any())
-            throw new Exception("Cart is empty");
+        if (product == null)
+            throw new Exception($"Product with ID {item.ProductId} not found");
 
-        decimal totalAmount = 0;
-        var orderItems = new List<OrderItem>();
+        if (item.Quantity <= 0)
+            throw new Exception("Quantity must be greater than 0");
 
-        foreach (var item in orderDto.Items)
+        var itemTotal = product.Price * item.Quantity;
+        totalAmount += itemTotal;
+
+        orderItems.Add(new OrderItem
         {
-            var product = await _context.Products.FindAsync(item.ProductId);
+            ProductId = product.ProductId,
+            Quantity = item.Quantity,
+            Price = product.Price
+        });
+    }
 
-            if (product == null)
-                throw new Exception($"Product with ID {item.ProductId} not found");
+    var order = new Order
+    {
+        UserId = orderDto.UserId,
+        OrderDate = DateTime.Now,
+        TotalAmount = totalAmount,
+        OrderItems = orderItems
+    };
 
-            if (item.Quantity <= 0)
-                throw new Exception("Quantity must be greater than 0");
+    _context.Orders.Add(order);
+    await _context.SaveChangesAsync();
 
-            var itemTotal = product.Price * item.Quantity;
-            totalAmount += itemTotal;
-
-            orderItems.Add(new OrderItem
-            {
-                ProductId = product.ProductId,
-                Quantity = item.Quantity,
-                Price = product.Price
-            });
-        }
-
-        var order = new Order
+    // ✅ FIXED RETURN (NO CIRCULAR ERROR)
+    return new OrderResponseDTO
+    {
+        OrderId = order.OrderId,
+        UserId = order.UserId,
+        TotalAmount = order.TotalAmount,
+        Items = orderItems.Select(i => new OrderItemResponseDTO
         {
-            UserId = orderDto.UserId,
-            OrderDate = DateTime.Now,
-            TotalAmount = totalAmount,
-            OrderItems = orderItems ?? new List<OrderItem>()
-        };
-
-        _context.Orders.Add(order);
-        await _context.SaveChangesAsync();
-
-        return order;
-    }
-
-    public async Task<List<Order>> GetAllOrdersAsync()
-    {
-        return await _context.Orders
-            .Include(o => o.OrderItems)
-            .ToListAsync();
-    }
-
-    public async Task<Order?> GetOrderByIdAsync(int id)
-    {
-        return await _context.Orders
-            .Include(o => o.OrderItems)
-            .FirstOrDefaultAsync(o => o.OrderId == id);
-    }
+            ProductId = i.ProductId,
+            Quantity = i.Quantity,
+            Price = i.Price
+        }).ToList()
+    };
 }
