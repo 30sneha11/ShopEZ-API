@@ -1,14 +1,9 @@
-using ShopEZ.API.DTOs;
 using ShopEZ.API.Models;
+using ShopEZ.API.DTOs;
 
-namespace ShopEZ.API.Services.Interfaces
+public interface IOrderService
 {
-    public interface IOrderService
-    {
-        Task<Order> CreateOrderAsync(OrderDTO orderDto);
-
-        Task<List<Order>> GetAllOrdersAsync();
-
-        Task<Order> GetOrderByIdAsync(int id);
-    }
+    Task<Order> CreateOrderAsync(OrderDTO orderDto);
+    Task<List<Order>> GetAllOrdersAsync();
+    Task<Order?> GetOrderByIdAsync(int id);
 }

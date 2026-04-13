@@ -1,53 +1,47 @@
 using Microsoft.AspNetCore.Mvc;
-using ShopEZ.API.DTOs;
 using ShopEZ.API.Services.Interfaces;
+using ShopEZ.API.DTOs;
 
-namespace ShopEZ.API.Controllers
+[ApiController]
+[Route("api/orders")]
+public class OrdersController : ControllerBase
 {
-    [ApiController]
-    [Route("api/orders")]
-    public class OrdersController : ControllerBase
+    private readonly IOrderService _orderService;
+
+    public OrdersController(IOrderService orderService)
     {
-        private readonly IOrderService _orderService;
+        _orderService = orderService;
+    }
 
-        public OrdersController(IOrderService orderService)
+    [HttpPost]
+    public async Task<IActionResult> CreateOrder(OrderDTO orderDto)
+    {
+        try
         {
-            _orderService = orderService;
-        }
-
-        // POST: api/orders
-        [HttpPost]
-        public async Task<IActionResult> CreateOrder(OrderDTO orderDto)
-        {
-            try
-            {
-                var order = await _orderService.CreateOrderAsync(orderDto);
-                return Ok(order);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        // GET: api/orders
-        [HttpGet]
-        public async Task<IActionResult> GetAllOrders()
-        {
-            var orders = await _orderService.GetAllOrdersAsync();
-            return Ok(orders);
-        }
-
-        // GET: api/orders/{id}
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetOrderById(int id)
-        {
-            var order = await _orderService.GetOrderByIdAsync(id);
-
-            if (order == null)
-                return NotFound("Order not found");
-
+            var order = await _orderService.CreateOrderAsync(orderDto);
             return Ok(order);
         }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetOrders()
+    {
+        var orders = await _orderService.GetAllOrdersAsync();
+        return Ok(orders);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetOrder(int id)
+    {
+        var order = await _orderService.GetOrderByIdAsync(id);
+
+        if (order == null)
+            return NotFound();
+
+        return Ok(order);
     }
 }

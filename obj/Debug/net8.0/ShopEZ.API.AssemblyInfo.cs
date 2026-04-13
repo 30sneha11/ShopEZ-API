@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShopEZ.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5eafbe7c5e9287dd34649dc04d68d0d779920d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ce6cee5fc20daa89cf0aa9db28c125592d9598b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShopEZ.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShopEZ.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

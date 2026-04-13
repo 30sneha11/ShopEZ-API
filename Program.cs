@@ -5,6 +5,7 @@ using ShopEZ.API.Repositories;
 using ShopEZ.API.Services.Interfaces;
 using ShopEZ.API.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services
@@ -19,6 +20,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
     ));
 
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -29,5 +31,9 @@ app.UseSwaggerUI();
 app.UseAuthorization();
 
 app.MapControllers();
-
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    db.Database.Migrate();
+}
 app.Run();

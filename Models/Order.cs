@@ -10,6 +10,6 @@ namespace ShopEZ.API.Models
 
         public decimal TotalAmount { get; set; }
 
-        public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+        public List<OrderItem>? OrderItems { get; set; } = new List<OrderItem>();
     }
 }
