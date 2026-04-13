@@ -16,3 +16,6 @@ namespace ShopEZ.API.DTOs
         public decimal Price { get; set; }
     }
 }
+
+
+
