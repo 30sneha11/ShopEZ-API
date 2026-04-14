@@ -23,7 +23,7 @@ public class OrdersController : ControllerBase
         }
         catch (Exception ex)
         {
-          return StatusCode(500, ex.ToString()); // 🔥 SHOW FULL ERROR
+            return StatusCode(500, ex.Message); // cleaner than ToString()
         }
     }
 
@@ -42,6 +42,6 @@ public class OrdersController : ControllerBase
         if (order == null)
             return NotFound();
 
-        return Ok(order);
+        return Ok(order); // ✅ correct
     }
 }
